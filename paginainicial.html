@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <!--Arquivo: estilo.css-->
+  <link rel="stylesheet" href="css/estilo.css">
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="imagens\Goodstuff-No-Nonsense-Free-Space-Space-shuttle.ico">
+</head>
+
+<body>
+  <nav class="cyan darken-3">
+    <div class="nav-wrapper container">
+      <img src="images/oie_transparent (22)a.png" class="brand-logo center">
+      <a href="#" data-activates="mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="left hide-on-med-and-down" style="margin-left: 9%;">
+        <li><a href="#galeria"><i class="material-icons left">photo_library</i>Images</a></li>
+      </ul>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#modalCriadores" class="modal-trigger indigo waves-effect waves-light btn-large"><i
+              class="left material-icons">people</i>Criador</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile">
+        <li><a href="#galeria"><i class="material-icons left">photo_library</i>Imagens</a></li>
+        <li><a href="#video"><i class="material-icons left">video_library</i>Video</a></li>
+        <li><a href="#modalCriadores" class="modal-trigger indigo waves-effect waves-light btn-large"><i
+              class="left material-icons"></i></a></li>
+      </ul>
+    </div>
+  </nav>
+  <div id="modalCriadores" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4 class="center">Jeziel Suzana</h4>
+      <img src="images/jeziel.jpeg" style="width: 170px; height: 170px; border-radius: 100%; position: absolute;">
+      <p style="margin: 5% 0 0 26%;"><b>Student Networking computer at CEFET-MG, web development enthusiast.</b></p>
+      <p style="margin: 2% 0 0 26%;"><b>GitHub: <a href="http://github.com/jezil2210">github.com/jezil2210</a></b></p> 
+    </div>
+    <div class="modal-footer">
+      <a class="red btn modal-close modal-action" style="margin: -70px -364px;">Fechar</a>
+    </div>
+  </div>
+
+  <img class="responsive-img" src="images/discovery.jpg">
+
+
+  <div id="div">
+
+    <a class="btn" id="btn_start">
+      <svg>
+        <rect>
+
+        </rect>
+      </svg>
+      START
+
+    </a>
+
+    <a class="btn" id="btn_nivel"><svg>
+        <rect></rect>
+      </svg>LEVEL</a>
+
+  </div>
+
+
+
+  <!-- imagens -->
+
+  <div id="galeria" class="container">
+    <h1 class="center">Gallery</h1>
+
+    <div class="row">
+
+      <div class="col s12 m6 l4">
+        <img src="images/image1.png" class="responsive-img card materialboxed">
+      </div>
+      <div class="col s12 m6 l4">
+        <img src="images/image5.png" class="responsive-img card materialboxed">
+      </div>
+      <div class="col s12 m6 l4">
+        <img src="images/image3.png" class="responsive-img card materialboxed">
+      </div>
+      <div class="col s12 m6 l4">
+        <img src="images/image6.png" class="responsive-img card materialboxed">
+      </div>
+      <div class="col s12 m6 l4">
+        <img src="images/image4.png" class="responsive-img card materialboxed">
+      </div>
+      <div class="col s12 m6 l4">
+        <img src="images/image2.png" class="responsive-img card materialboxed">
+      </div>
+    </div>
+  </div>
+
+  <!--Import jQuery before materialize.js-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+
+  <script type="text/javascript">
+    $(".button-collapse").sideNav();
+
+    $(document).ready(function () {
+
+      $('.modal').modal();
+    });
+
+    let div = document.querySelector("div")
+    let level 
+    let btn_nivel = document.querySelector("#btn_nivel")
+    let btn_start = document.querySelector("#btn_start")
+
+    btn_nivel.addEventListener("click", () => {
+      btn_nivel.remove()
+
+      let btn_eazy = document.createElement("a")
+      let btn_normal = document.createElement("a")
+      let btn_hard = document.createElement("a")
+
+      let text_eazy = document.createTextNode("EAZY")
+      let text_normal = document.createTextNode("NORMAL")
+      let text_hard = document.createTextNode("HARD")
+
+      btn_eazy.appendChild(text_eazy)
+      btn_normal.appendChild(text_normal)
+      btn_hard.appendChild(text_hard)
+
+      btn_eazy.classList.add("btn")
+      btn_normal.classList.add("btn")
+      btn_hard.classList.add("btn")
+
+      btn_eazy.id = "btn_eazy"
+      btn_normal.id = "btn_normal"
+      btn_hard.id = "btn_hard"
+
+      div.append(btn_eazy)
+      div.append(btn_normal)
+      div.append(btn_hard)
+
+      btn_eazy.addEventListener('click', () => {
+        btn_eazy.style.backgroundColor = "#00e2ff"
+        btn_normal.style.backgroundColor = "transparent"
+        btn_hard.style.backgroundColor = "transparent"
+        level = "eazy"
+      })
+
+      btn_normal.addEventListener('click', () => {
+        btn_eazy.style.backgroundColor = "transparent"
+        btn_normal.style.backgroundColor = "#00e2ff"
+        btn_hard.style.backgroundColor = "transparent"
+        level = "normal"
+      })
+
+      btn_hard.addEventListener('click', () => {
+        btn_eazy.style.backgroundColor = "transparent"
+        btn_normal.style.backgroundColor = "transparent"
+        btn_hard.style.backgroundColor = "#00e2ff"
+        level = "hard"
+      })
+
+    })
+
+    btn_start.addEventListener('click', () => {
+        if(level == null){
+          alert('Please Choose a level')
+        }else{
+          window.location.href = "PaginaJogo.html?" + level
+        }
+      })
+  </script>
+</body>
+
+</html>

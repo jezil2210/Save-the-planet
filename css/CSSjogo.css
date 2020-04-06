@@ -1,0 +1,118 @@
+body{
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-image: url('../images/space.jpg');
+}
+.naveJog{
+  width:120px;
+  height: 120px;
+  background-image: url("../images/nave5.gif");
+  position: absolute;
+  background-size:contain;
+}
+.MsgTela{
+  position: absolute;
+  margin-left: -25%;
+  top: 50px;
+  left: 50%;
+  width:500px;
+  height:500px;
+  display: none
+}
+#medidorPlaneta{
+    border:2px solid black;
+    width: 300px;
+    height: 20px;
+    margin-top: 6%;
+    background-color: transparent;
+}
+#barraPlaneta{
+  width: 100%;
+  height: 20px;
+  background-color: blue;
+  transition: width 200ms ease-out;
+}
+#medidorNave{
+  border:2px solid black;
+  width: 200px;
+  height: 20px;
+  margin-top: 3%;
+  background-color: transparent;
+}
+#barraNave{
+  width: 100%;
+  height: 20px;
+  background-color: red;
+  transition: width 200ms ease-out;
+}
+.tirojog{
+   width: 6px;
+   height: 6px;
+   background-color: red;
+   border-radius: 6px;
+   position: absolute;
+}
+.bomba{
+  width: 55px;
+  height: 55px;
+  background-image: url("../images/bomba1.gif");
+  position: absolute;
+  background-size:contain;
+  transition: opacity 800ms linear;
+}
+.bomba.explodida {
+  background-image: url('../images/explosion.gif');
+  opacity: 0;
+}
+
+.explosao{
+  width: 55px;
+  height: 55px;
+  position: absolute;
+}
+.telaMsg{
+  position: absolute;
+  width: 852px;
+  height: 480px;
+  margin: -5% 10% 0 20%;
+  display: none;
+  border-radius: 100%;
+  border-color: white;
+  border-width: 10px;
+  border-style: ridge;
+}
+#contBombas{
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background-color: aqua;
+  margin: -8% 93%;
+  position: absolute;
+}
+#button_back {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+  padding: 10px 20px;
+  position: absolute;
+  margin: 43% 45%;
+	background: -webkit-gradient(
+		linear, left top, left bottom,
+		from(#ff0d0d),
+		to(#fa4646));
+	background: linear-gradient(
+		top,
+		#ff0d0d 0%,
+		#fa4646);
+	border-radius: 30px;
+	border: 3px solid #000000;
+	box-shadow:
+		0px 3px 11px rgba(000,000,000,0),
+		inset 0px 0px 1px rgba(240,9,48,1);
+	text-shadow:
+		0px -1px 0px rgba(000,000,000,0.2),
+		0px 1px 0px rgba(255,255,255,0.3);
+}
+mark{
+  background-color: #3a38bf;
+}

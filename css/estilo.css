@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+#galeria h1{
+    font-family: 'Audiowide', cursive;
+}
+/* INCIO do Codigo retirado do video: https://www.youtube.com/watch?v=iLTsfFFGzl4&t=52s */
+
+.btn{
+  position: absolute;
+  transform: translate(-50%,-50%);
+  width: 200px;
+  height: 60px;
+  text-align: center;
+  line-height: 60px;
+  font-family: 'Audiowide', cursive;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 4px;
+  color: #fff;
+  text-decoration: none;
+  background-color: transparent;
+}
+#btn_start {
+  top: 35%;
+  left: 50%;
+}
+#btn_nivel{
+  top: 50%;
+  left: 50%;  
+}
+#btn_eazy{
+  margin-top: 35%;
+  margin-left: 7%;
+}
+#btn_normal{
+  margin-top: 35%;
+  margin-left: 29%;
+}
+#btn_hard{
+  margin-top: 35%;
+  margin-left: 51%;
+}
+.btn svg,
+.btn svg rect{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+}
+.btn svg rect{
+  stroke: #00e2ff;
+  stroke-width: 6;
+  transition: 1.5s;
+  stroke-dasharray: 60 200;
+  stroke-dashoffset: 320;
+  background-color: transparent;
+
+}
+.btn:hover svg rect{
+  stroke: #0404B4 ;
+  stroke-dasharray: 200 60;
+  stroke-dashoffset: 0;
+  background-color: transparent;
+}
+
+
