@@ -1,4 +1,4 @@
-# Save-the-planet
+# Save The Planet
 
 <a href="https://jezil2210.github.io/Save-the-planet/">Play here</a> 
 
